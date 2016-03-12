@@ -7,8 +7,8 @@ router.get('/', function(req, res) {
   Day8.findOne({_id: 1}, function(err, day8) {
     if(err) { console.error(err); res.status(500).send('Broken!'); }
     else {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      // res.header("Access-Control-Allow-Origin", "*");
+      // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       res.json(day8);
     }
   });
@@ -28,8 +28,8 @@ router.post('/update/:size', function(req, res) {
     if(err) { console.error(err); }
     else {
       console.log('worked????');
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      // res.header("Access-Control-Allow-Origin", "*");
+      // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       res.status(200).send({success:true});
     }
   });
