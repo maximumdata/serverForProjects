@@ -7,14 +7,15 @@ var express = require('express'),
 
 app.set('port', 7080);
 
-app.use('/day8/', day8);
-app.use('/day15/', day15);
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+app.use('/day8/', day8);
+app.use('/day15/', day15);
+
 
 var server = http.createServer(app);
 server.listen(7080);
