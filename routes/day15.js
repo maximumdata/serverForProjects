@@ -22,7 +22,7 @@ router.post('/api/notes', function(req, res) {
   newNote.save(function(err) {
     if(err) { res.status(500).send('Saving note failed!'); }
     else {
-      res.status(200).send('Worked!');
+      res.status(200);
     }
   });
 
