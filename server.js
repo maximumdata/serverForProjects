@@ -4,7 +4,8 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     day8 = require('./routes/day8'),
-    day15 = require('./routes/day15');
+    day15 = require('./routes/day15'),
+    day16 = require('./routes/day16');
 
 app.set('port', 7080);
 
@@ -19,6 +20,7 @@ app.use(function(req, res, next) {
 
 app.use('/day8/', day8);
 app.use('/day15/', day15);
+app.use('/word', day16);
 
 
 var server = http.createServer(app);
